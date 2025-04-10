@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/inicio_registro.css">
+</head>
+<body>
+    <section id="inicio-sesion">
+        <div class="container">
+            <div class="section-header">
+                <h2>Inicio de Sesión</h2>
+                <div class="divider"></div>
+                <p>Ingresa con tu ID y contraseña.</p>
+            </div>
+            <form action="/iniciar-sesion" method="POST" class="form-inicio-sesion">
+                <div class="form-group">
+                    <label for="id-usuario">ID de Usuario</label>
+                    <input type="text" id="id-usuario" name="id-usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena-inicio">Contraseña</label>
+                    <input type="password" id="contrasena-inicio" name="contrasena-inicio" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle - Reciclaje con recompensas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="JS/Script.js">
+</head>
+<body>
+    <!-- Nav-->
+    <nav class="nav">
+        <div class="container nav-flex">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="Imagenes/EcoCycle.png" alt="EcoCycle Logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                    <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
+                    <li class="dropdown">
+                        <a href="#superheroes" class="dropdown-toggle">Héroes del Reciclaje</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#chispitas"><img src="Imagenes/Chispitas.png" alt="Chispitas"><span>Chispitas</span></a></li>
+                            <li><a href="#flurosil"><img src="Imagenes/Flurosil.png" alt="Flurosil"><span>Flurosil</span></a></li>
+                            <li><a href="#paperyus"><img src="Imagenes/Paperyus.png" alt="Paperyus"><span>Paperyus</span></a></li>
+                            <li><a href="#polaris"><img src="Imagenes/Polaris.png" alt="Polaris"><span>Polaris</span></a></li>
+                            <li><a href="#tetrax"><img src="Imagenes/Tetrax.png" alt="Tetrax"><span>Tetrax</span></a></li>
+                            <li><a href="#voltaje"><img src="Imagenes/Voltaje.png" alt="Voltaje"><span>Voltaje</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Niveles">Niveles</a></li>
+                    <li><a href="#mapa">Puntos de recoleccion</a></li>
+                    <li><a href="iniciar-sesion.html" class="btn btn-login">Iniciar Sesión</a></li>
+                    <li><a href="registrar.html" class="btn btn-register">Registrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+<
+<!-- Hero Section -->
+<section class="hero" id="inicio">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Transforma el planeta con cada gesto de reciclaje</h1>
+            <p>EcoCycle hace el reciclaje accesible, divertido y significativo. Recicla, gana puntos y canjea por descuentos en comercios sostenibles.</p>
+            <div class="hero-buttons">
+                <a href="/registro" class="btn btn-primary btn-large">¡Únete ahora!</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Imagenes/Superheroes.png" alt="Superhéroes del Reciclaje">
+        </div>
+    </div>
+</section>
+
+    <!-- ¿Quiénes Somos? -->
+    <section class="about" id="quienes-somos">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Quiénes Somos?</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Imagenes/Logo.jpg" alt="Misión EcoCycle">
+                </div>
+                <div class="about-text">
+                    <h3>Nuestra Misión</h3>
+                    <p>EcoCycle nace con la misión de transformar la manera en que reciclamos, haciendo lo accesible, divertido y significativo. A través de un sistema de recompensas, busca motivar a las personas a tomar acciones responsables con el medio ambiente, integrando la tecnología y la sociedad para crear un futuro más sostenible.</p>
+
+                    <h3>Nuestros Objetivos</h3>
+                    <ul>
+                        <li>Aumentar la tasa de reciclaje en comunidades urbanas y rurales</li>
+                        <li>Conectar ciudadanos con recicladores locales</li>
+                        <li>Impulsar el comercio sostenible mediante alianzas estratégicas</li>
+                        <li>Implementar campañas de concienciación ambiental a nivel global</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Cómo Funciona? -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Cómo Funciona?</h2>
+                <div class="divider"></div>
+                <table>
+                    <tr><th>Material</th><th>Ejemplo</th><th>Puntos EcoCycle (Kilo)</th></tr>
+                    <tr><td>Plástico</td><td>Botella de agua</td><td>20</td></tr>
+                    <tr><td>Cartón</td><td>Cajas de cereal</td><td>15</td></tr>
+                    <tr><td>Papel</td><td>Hojas impresas</td><td>10</td></tr>
+                    <tr><td>Vidrio</td><td>Botellas, frascos</td><td>12</td></tr>
+                    <tr><td>Pilas</td><td>AA, AAA</td><td>50</td></tr>
+                    <tr><td>Electrónicos</td><td>Celulares, cables</td><td>30</td></tr>
+                  </table>
+        </div>
+    </section>
+
+    <!-- Superhéroes del Reciclaje -->
+<section class="superheroes" id="superheroes">
+    <div class="container">
+        <div class="section-header">
+            <h2>Superhéroes del Reciclaje</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="superheroes-intro">
+            <p>Estos superhéroes representan la lucha contra la contaminación y el desperdicio. Cada uno simboliza diferentes materiales reciclables y nos enseñan cómo podemos contribuir para crear un mundo más sostenible.</p>
+        </div>
+        
+        <div class="superheroes-grid">
+            <div class="superhero-card" id="chispitas">
+                <div class="superhero-image">
+                    <img src="Imagenes/Chispitas.png" alt="Chispita">
+                </div>
+                <div class="superhero-content">
+                    <h3>Chispita</h3>
+                    <p class="superhero-power">Poder: Energía Recargable</p>
+                    <p>El encargado de la recolección y reciclaje de pilas y baterías. Con sus fuentes de energía dual, nos enseña cómo reutilizar la energía de manera sostenible.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">Una pila reciclada evita la contaminación de 167,000 litros de agua</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Chispitas.mp4">Conocer Más</button>
+                </div>
+            </div>
+            
+            <div class="superhero-card" id="flurosil">
+                <div class="superhero-image">
+                    <img src="Imagenes/Flurosil.png" alt="Flurosil">
+                </div>
+                <div class="superhero-content">
+                    <h3>Flurosil</h3>
+                    <p class="superhero-power">Poder: Cristalización Infinita</p>
+                    <p>Guerrera del ciclo infinito del vidrio. Su cuerpo cristalino nos recuerda que el vidrio es 100% reciclable y no pierde calidad en el proceso.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">Reciclar vidrio ahorra un 30% de energía vs. fabricarlo nuevo</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Flurosil.mp4">Conocer Más</button>
+                </div>
+            </div>
+            
+            <div class="superhero-card" id="paperyus">
+                <div class="superhero-image">
+                    <img src="Imagenes/Paperyus.png" alt="Paperyus">
+                </div>
+                <div class="superhero-content">
+                    <h3>Paperyus</h3>
+                    <p class="superhero-power">Poder: Transforma papel reciclado en trampas y escudos.  </p>
+                    <p>Protector de la naturaleza. Sus hojas recicladas se convierten en poderosas herramientas de defensa y estrategia.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">Fomenta la reutilización del papel y la reducción de la deforestación.</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Paperyus.mp4">Conocer Más</button>
+                </div>
+            </div>
+            
+            <div class="superhero-card" id="polaris">
+                <div class="superhero-image">
+                    <img src="Imagenes/Polaris.png" alt="polaris">
+                </div>
+                <div class="superhero-content">
+                    <h3>polaris</h3>
+                    <p class="superhero-power">Poder: Transformación Polímera</p>
+                    <p>Experto en transformación de plásticos. Su armadura verde cristalina representa la versatilidad del plástico reciclado y su potencial para nuevos usos.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">1 ton de plástico reciclado = 5,774 kWh de energía ahorrada</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Polaris.mp4">Conocer Más</button>
+                </div>
+            </div>
+            
+            <div class="superhero-card" id="tetrax">
+                <div class="superhero-image">
+                    <img src="Imagenes/Tetrax.png" alt="Tetrax">
+                </div>
+                <div class="superhero-content">
+                    <h3>Tetrax</h3>
+                    <p class="superhero-power">Poder: Escudo Reciclable</p>
+                    <p>Defensor de los bosques. Su cuerpo de cartón y su escudo con el símbolo de reciclaje nos recuerdan la importancia de reciclar papel y cartón.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">1 ton de cartón reciclado salva 17 árboles</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Tetrax.mp4">Conocer Más</button>
+                </div>
+            </div>
+            
+            <div class="superhero-card" id="voltaje">
+                <div class="superhero-image">
+                    <img src="Imagenes/Voltaje.png" alt="Voltaje">
+                </div>
+                <div class="superhero-content">
+                    <h3>Voltaje</h3>
+                    <p class="superhero-power">Poder: Electro-conversión</p>
+                    <p>Especialista en dispositivos electrónicos. Su cuerpo compuesto de enchufes y conexiones nos enseña a reciclar correctamente los residuos electrónicos.</p>
+                    <div class="superhero-stats">
+                        <div class="stat">
+                            <span class="label">Impacto:</span>
+                            <span class="value">Recupera metales raros y evita contaminantes peligrosos</span>
+                        </div>
+                    </div>
+                    <button class="btn-conocer-mas" data-video="Voltaje.mp4">Conocer Más</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="join-superheroes">
+            <h3>¡Conviértete en un Superhéroe del Reciclaje!</h3>
+            <p>Únete a EcoCycle y forma parte de nuestro equipo de superhéroes. Recicla, gana puntos y ayuda a salvar el planeta mientras obtienes recompensas.</p>
+            <a href="iniciar-sesion.html" class="btn btn-primary">¡Únete ahora!</a>
+        </div>
+    </div>
+</section>
+    <!-- Sistema de Niveles -->
+    <section class="level-system">
+        <div class="container" id="Niveles">
+            <div class="section-header">
+                <h2>Sistema de Niveles Educativos</h2>
+                <div class="divider"></div>
+                <p>Mientras más recicles, más avanzas en nuestro sistema de niveles inspirado en especies en peligro de extinción.</p>
+            </div>
+            <div class="niveles">
+                <div class="nivel">
+                    <div class="linea"></div>
+                    <div class="contenido">
+                        <p>DE 0 A 100.</p>
+                        <img src="Imagenes/tortuga.jpeg" alt="Tortuga">
+                    </div>
+                </div>
+                <div class="nivel">
+                    <div class="linea"></div>
+                    <div class="contenido">
+                        <p>DE 101 A 300.</p>
+                        <img src="Imagenes/Jaguar.jpg" alt="Jaguar">
+                    </div>
+                </div>
+                <div class="nivel">
+                    <div class="linea"></div>
+                    <div class="contenido">
+                        <p>DE 301 A 600.</p>
+                        <img src="Imagenes/Delfin.jpeg" alt="Delfin_rosado">
+                    </div>
+                </div>
+                <div class="nivel">
+                    <div class="linea"></div>
+                    <div class="contenido">
+                        <p>DE 601 A 1000.</p>
+                        <img src="Imagenes/Oso_polar.jpeg" alt="Oso_polar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puntos de recoleccion -->
+        <section id="mapa">
+            <div class="section-header">
+                <h2>Puntos de Recolección</h2>
+                <div class="divider"></div>
+                <p>Encuentra los puntos de recolección autorizados en tu localidad.</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3976.8472162034096!2d-74.08175!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1614345600000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="container">
+        </div>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <div class="divider"></div>
+                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            </div>
+            <form action="/enviar-mensaje" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <h4>Recursos</h4>
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/guias-reciclaje">Guías de Reciclaje</a></li>
+                <li><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                <li><a href="/mapa-recicladores">Mapa de Recicladores</a></li>
+                <li><a href="/materiales">Materiales Reciclables</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="/terminos-condiciones">Términos y Condiciones</a></li>
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/politica-cookies">Política de Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Suscríbete a nuestro boletín</h4>
+            <p>Recibe noticias, eventos y consejos de reciclaje.</p>
+            <form action="/suscribir" method="POST">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-primary">Suscribirme</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 EcoCycle. Ana rueda, Nicolas Quitian, Sara Patarroyo.</p>
+    </div>
+</div>
+</footer>
+<script src="JS/Script.js"></script>
+</body>
+</html>
