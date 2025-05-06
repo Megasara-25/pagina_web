@@ -6,6 +6,7 @@
     <title>EcoCycle - Reciclaje con recompensas</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="JS/Script.js">
+    <link rel="stylesheet" href="tabla.sql">
 </head>
 <body>
     <!-- Nav-->
@@ -228,7 +229,7 @@
         <div class="join-superheroes">
             <h3>¡Conviértete en un Superhéroe del Reciclaje!</h3>
             <p>Únete a EcoCycle y forma parte de nuestro equipo de superhéroes. Recicla, gana puntos y ayuda a salvar el planeta mientras obtienes recompensas.</p>
-            <a href="iniciar-sesion.html" class="btn btn-primary">¡Únete ahora!</a>
+            <a href="registrar.html" class="btn btn-primary">¡Únete ahora!</a>
         </div>
     </div>
 </section>
@@ -292,7 +293,7 @@
                 <div class="divider"></div>
                 <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
             </div>
-            <form action="/enviar-mensaje" method="POST" class="contact-form">
+            <form id="contactForm" class="contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" required>

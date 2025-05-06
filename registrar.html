@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - EcoCycle</title>
     <link rel="stylesheet" href="CSS/inicio_registro.css">
 </head>
+
 <body>
     <section id="registro">
         <div class="container">
@@ -14,14 +16,19 @@
                 <div class="divider"></div>
                 <p>Regístrate para comenzar a reciclar y ganar recompensas.</p>
             </div>
-            <form action="/registrar" method="POST" class="form-registro">
+            <form action="/ecoCycle/php/registrer.php" method="POST" id="registerForm" class="form-registro">
+
                 <div class="form-group">
-                    <label for="usuario">Correo o Teléfono</label>
-                    <input type="text" id="usuario" name="usuario" required>
+                    <label for="nombres">Nombre y Apellido</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Correo</label>
+                    <input type="text" id="correo" name="correo" required>
                 </div>
                 <div class="form-group">
                     <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" required>
+                    <input type="password" id="clave" name="clave" required>
                     <small>Debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo.</small>
                 </div>
                 <div class="form-group">
@@ -32,5 +39,46 @@
             </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const clave = document.getElementById('clave').value;
+            const confirmPassword = document.getElementById('verificar-contrasena').value;
+
+            if (clave !== confirmPassword) {
+                alert('❌ Las contraseñas no coinciden');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('correo', document.getElementById('correo').value);
+            formData.append('clave', clave);
+            formData.append('nombres', document.getElementById('nombres').value); // si tienes campo usuario
+
+            fetch('/ecoCycle/php/registrer.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('✅ ' + data.message);
+                        window.location.href = 'index.html'; // redirige al inicio o bienvenida
+                    } else {
+                        alert('⚠️ ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ Error al registrar usuario.');
+                });
+        });
+    </script>
+
+
+
 </body>
+
 </html>

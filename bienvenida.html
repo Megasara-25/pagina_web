@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a EcoCycle</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Imagenes/EcoCycle.png" alt="Logo EcoCycle">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#perfil">Mi Perfil</a></li>
+                    <li><a href="#recompensas">Recompensas</a></li>
+                    <li><a href="index.html" class="btn btn-logout">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 id="mensaje-bienvenida">¡Bienvenido a EcoCycle!</h1>
+            <p>Gracias por iniciar sesión. Comienza tu camino como héroe del reciclaje y gana recompensas por salvar el planeta.</p>
+            <a href="index.html" class="btn btn-primary">Explorar</a>
+        </div>
+    </section>
+
+    <script>
+        // Puedes pasar el nombre desde localStorage si lo guardaste al iniciar sesión
+        const nombreUsuario = localStorage.getItem('nombreUsuario');
+        if (nombreUsuario) {
+            document.getElementById('mensaje-bienvenida').textContent = `¡Bienvenido, ${nombreUsuario}!`;
+        }
+    </script>
+</body>
+</html>

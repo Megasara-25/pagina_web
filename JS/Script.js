@@ -40,3 +40,68 @@ document.querySelectorAll('.btn-conocer-mas').forEach(button => {
         });
     });
 });
+
+// Manejo del formulario de registro
+document.getElementById('registerForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('register.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            window.location.href = 'iniciar-sesion.html';
+        } else {
+            alert(data.message);
+        }
+    });
+});
+
+// Manejo del formulario de inicio de sesión
+document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('login.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            localStorage.setItem('nombreUsuario', data.nombre); // ← Guardar nombre
+            window.location.href = 'bienvenida.html';
+        }
+        else {
+            alert(data.message);
+        }
+    });
+});
+
+// Manejo del formulario de contacto
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('contact.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            this.reset();
+        } else {
+            alert(data.message);
+        }
+    });
+});

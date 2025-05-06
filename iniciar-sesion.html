@@ -14,7 +14,7 @@
                 <div class="divider"></div>
                 <p>Ingresa con tu ID y contraseña.</p>
             </div>
-            <form action="/iniciar-sesion" method="POST" class="form-inicio-sesion">
+            <form action="/ecoCycle/php/login.php" method="POST" id="loginForm" class="form-inicio-sesion">
                 <div class="form-group">
                     <label for="id-usuario">ID de Usuario</label>
                     <input type="text" id="id-usuario" name="id-usuario" required>
@@ -27,5 +27,34 @@
             </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            const formData = new FormData();
+            formData.append('email', document.getElementById('id-usuario').value);
+            formData.append('password', document.getElementById('contrasena-inicio').value);
+    
+            fetch('/ecoCycle/php/login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message); // Mensaje del servidor
+                    window.location.href = 'bienvenida.html'; // Redirige si es exitoso
+                } else {
+                    alert('⚠️ ' + data.message); // Muestra error
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ocurrió un error al iniciar sesión.');
+            });
+        });
+    </script>
+    
 </body>
 </html>

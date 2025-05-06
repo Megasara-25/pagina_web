@@ -938,48 +938,36 @@ footer{
     margin: 0 auto;
     background-color: #fff;
     padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form .form-group {
     margin-bottom: 20px;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--gray);
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    color: var(--text-color);
-}
-
-.contact-form textarea {
-    resize: vertical;
 }
 
 .contact-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: #fff;
+    background: linear-gradient(90deg, #34D399, #2bb583);
+    color: white;
+    padding: 12px 24px;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 50px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #2bb583;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
