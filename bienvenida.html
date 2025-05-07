@@ -1,123 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Puntos - EcoCycle</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', cursive;
-      background: white;
-    }
-    .layout {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      height: 100vh;
-      border: 2px solid black;
-      background-image: linear-gradient(white 95%, transparent 5%), linear-gradient(90deg, white 95%, transparent 5%);
-      background-size: 40px 40px;
-    }
-    aside {
-      border-right: 2px solid black;
-      padding: 20px;
-      font-size: 16px;
-    }
-    aside h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
-      color: #008b8b;
-      text-align: center;
-    }
-    aside nav p {
-      margin-top: 24px;
-      font-weight: bold;
-    }
-    aside nav ul {
-      list-style: none;
-      padding-left: 10px;
-    }
-    aside nav li {
-      margin: 6px 0;
-    }
-    main {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 40px;
-      color: #008b8b;
-      margin-bottom: 20px;
-    }
-    .info {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .grafico {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: conic-gradient(#008b8b 50%, white 50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      color: #000;
-      border: 2px solid #008b8b;
-      margin-bottom: 30px;
-    }
-    .boton-mas {
-      border: 2px solid black;
-      padding: 10px 25px;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      background: white;
-      transition: transform 0.2s;
-    }
-    .boton-mas:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a EcoCycle</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-  <div class="layout">
-    <aside>
-      <h2>Logo</h2>
-      <nav>
-        <p>Ecopuntos</p>
-        <ul>
-          <li>&rarr; Mis puntos</li>
-          <li>&rarr; Lugares visitados</li>
-          <li>&rarr; Estadística</li>
-        </ul>
-        <p>Cuenta</p>
-        <ul>
-          <li>&rarr; Mi cuenta</li>
-          <li>&rarr; App</li>
-        </ul>
-        <p>Recompensas</p>
-        <ul>
-          <li>&rarr; Lugares</li>
-          <li>&rarr; Descuentos</li>
-          <li>&rarr; Eventos</li>
-        </ul>
-        <p style="margin-top: 30px;">Cerrar Sesión</p>
-      </nav>
-    </aside>
-    <main>
-      <h1>Mis Puntos</h1>
-      <div class="info">
-        <div>Nivel: Tortuga</div>
-        <div>Puntos: 50 pts</div>
-      </div>
-      <div class="grafico">50 pts</div>
-      <button class="boton-mas">Conoce más</button>
-    </main>
-  </div>
+    <nav class="nav">
+        <div class="container nav-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Imagenes/EcoCycle.png" alt="Logo EcoCycle">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#perfil">Mi Perfil</a></li>
+                    <li><a href="#recompensas">Recompensas</a></li>
+                    <li><a href="index.html" class="btn btn-logout">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 id="mensaje-bienvenida">¡Bienvenido a EcoCycle!</h1>
+            <p>Gracias por iniciar sesión. Comienza tu camino como héroe del reciclaje y gana recompensas por salvar el planeta.</p>
+            <a href="index.html" class="btn btn-primary">Explorar</a>
+        </div>
+    </section>
+
+    <script>
+        // Puedes pasar el nombre desde localStorage si lo guardaste al iniciar sesión
+        const nombreUsuario = localStorage.getItem('nombreUsuario');
+        if (nombreUsuario) {
+            document.getElementById('mensaje-bienvenida').textContent = `¡Bienvenido, ${nombreUsuario}!`;
+        }
+    </script>
 </body>
 </html>
 
